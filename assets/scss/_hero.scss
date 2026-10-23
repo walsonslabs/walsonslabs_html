@@ -1,0 +1,175 @@
+/*===========================
+    03. Hero CSS
+===========================*/
+.hero-section {
+    padding-top: 100px;
+
+    .hero-content-wrapper {
+        padding-top: 150px;
+        padding-bottom: 290px;
+
+        @media #{$desktop} {
+            padding-top: 130px;
+            padding-bottom: 230px;
+        }
+
+        @media #{$laptop} {
+            padding-top: 130px;
+            padding-bottom: 230px;
+        }
+        @media #{$lg} {
+            padding-top: 130px;
+            padding-bottom: 200px;
+        }
+        @media #{$md} {
+            padding: 90px 0;
+        }
+        @media #{$xs} {
+            padding: 90px 0 60px;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 50px;
+            color: $theme-color;
+            margin-bottom: 0;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 65px;
+            color: $heading-color;
+            margin-bottom: 25px;
+
+            @media #{$xs} {
+                font-size: 40px;
+                line-height: 52px;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 26px;
+            color: $body-color;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+    }
+
+    .hero-img {
+        position: absolute;
+        right: 0;
+        top: 107px;
+        width: 48%;
+        text-align: right;
+
+        @media #{$desktop} {
+            top: 70px;
+        }
+        @media #{$laptop} {
+            top: 70px;
+        }
+
+        @media #{$lg} {
+            top: 50px;
+        }
+
+        @media #{$md} {
+            position: relative;
+            width: 100%;
+            top: 0;
+        }
+        @media #{$xs} {
+            position: relative;
+            width: 100%;
+            top: 0;
+        }
+
+        &.hero-img-2 {
+            top: 0;
+        }
+
+        .hero-img-right {
+            position: relative;
+
+            @media #{$md} {
+                position: static;
+            }
+            @media #{$xs} {
+                position: static;
+            }
+        }
+
+        img.dot-shape {
+            position: absolute;
+            left: -60px;
+            bottom: 60px;
+            z-index: -1;
+        }
+
+        .video-btn {
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            @include transform(translateY(-50%));
+
+            @media #{$md} {
+                left: 50%;
+                @include transform(translate(-50%));
+            }
+            @media #{$xs} {
+                left: 50%;
+                @include transform(translate(-50%));
+            }
+
+            a {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background: $white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: $theme-color;
+                @include transition(.3s);
+                @include box-shadow(0px 0px 20px rgba(#AABDF9, .45));
+
+                &:hover {
+                    @include box-shadow(0px 0px 50px rgba(#AABDF9, .65));
+                }
+            }
+        }
+    }
+
+    &.hero-section-2 {
+
+        .hero-content-wrapper {
+            padding-bottom: 200px;
+
+            @media #{$laptop} {
+                padding: 150px 0;
+            }
+            @media #{$lg} {
+                padding: 150px 0;
+            }
+            @media #{$md} {
+                padding: 90px 0;
+            }
+            @media #{$xs} {
+                padding: 90px 0 60px;
+            }
+        }
+
+        .border-btn {
+
+            &:hover {
+                background: rgba($theme-color, .7);
+                color: $white;
+            }
+        }
+    }
+}

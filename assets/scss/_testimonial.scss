@@ -1,0 +1,130 @@
+/*===========================
+    08. Testimonial CSS 
+===========================*/
+
+.testimonial-section {
+    background-color: $gray;
+    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0 89%);
+  
+      @media #{$lg} {
+        clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%);
+      }
+      @media #{$md} {
+        clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%);
+      }
+      @media #{$xs} {
+        clip-path: polygon(0% 8%, 100% 2%, 100% 98%, 0 92%);
+      }
+
+    .testimonial-logo-wrapper {
+        margin-bottom: 60px;
+
+        @media #{$laptop} {
+            margin-bottom: 0;
+        }
+        
+        .img {
+            margin-right: 40px;
+            width: 116px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .testimonial-wrapper {
+
+        .single-testimonial {
+            display: flex;
+            padding: 2px;
+
+
+            .testimonial-img {
+                margin-right: 60px;
+                margin-top: 40px;
+
+                @media #{$xs} {
+                    display: none;
+                }
+
+                img {
+                    width: 100%;
+                    width: 133px;
+                    height: 133px;
+                    border-radius: 50%;
+
+                }
+            }
+        }
+    }
+
+    .testimonial-content {
+        .quote {
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 500;
+            color: $heading-color;
+            font-style: italic;
+        }
+    }
+
+    .testimonial-info {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .testimonial-meta {
+
+            h5 {
+                margin-bottom: 5px;
+            }
+
+            span {
+                font-size: 16px;
+                color: $body-color;
+            }
+        }
+    }
+}
+
+.testimonial-wrapper {
+    position: relative;
+
+    .tns-controls {
+        position: absolute;
+        bottom: -40px;
+        left: 0px;
+        z-index: 99;
+        
+        button {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 2;
+            color: $body-color;
+            font-size: 20px;
+            background: white;
+            border: 1px solid $border-color;
+            padding: 2px 5px;
+            border-radius: 50%;
+            @include transition(.3s);
+
+            &:hover {
+                color: $white;
+                background: $theme-color;
+            }
+            &:first-child {
+                margin-right: 20px;
+            }
+
+        }
+
+    }
+}
